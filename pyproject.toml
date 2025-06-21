@@ -1,0 +1,88 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ouroboros-ops"
+version = "0.1.0"
+description = "A zero-player, massively-autonomous Snake battleground stressing AI path-planning and real-time performance"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "snake_core"}, {include = "engine"}, {include = "ui_pygame"}, {include = "cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.24.0"
+numba = "^0.58.0"
+pygame = "^2.5.0"
+click = "^8.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+hypothesis = "^6.82.0"
+black = "^23.7.0"
+ruff = "^0.0.284"
+mypy = "^1.5.0"
+line-profiler = "^4.1.0"
+mkdocs-material = "^9.1.0"
+
+[tool.poetry.group.build.dependencies]
+pyinstaller = "^5.13.0"
+pygbag = "^0.8.0"
+
+[tool.poetry.scripts]
+ouroboros-simulate = "cli.simulate:main"
+ouroboros-benchmark = "cli.benchmark:main"
+ouroboros-ops = "main:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.ruff]
+select = ["E", "F", "W", "C", "I", "N", "D", "UP", "YTT", "ANN", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "PERF"]
+ignore = ["D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107"]
+line-length = 88
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=snake_core --cov=engine --cov=ui_pygame --cov=cli --cov-report=term-missing --cov-report=html"
+
+[tool.coverage.run]
+source = ["snake_core", "engine", "ui_pygame", "cli"]
+omit = ["tests/*", "docs/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
