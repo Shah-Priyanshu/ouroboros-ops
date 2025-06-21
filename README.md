@@ -12,10 +12,16 @@ A zero-player, massively-autonomous Snake battleground that stresses AI path-pla
 
 ## 🎥 Demo Video
 
-[![Ouroboros Ops Demo](docs/screenshots/main_simulation.png)](docs/demo_video.mp4)
-*Click to watch: 18.8-second HD demo showing 80 autonomous snakes with intelligent survival*
+> **📱 GitHub Tip**: Click "Download" on the video file to watch, or view the raw file directly
+> 
+> **🔗 Direct Links**: 
+> - **[📺 Watch Video (MP4)](https://github.com/Shah-Priyanshu/ouroboros-ops/raw/main/docs/demo_video.mp4)** ← *Click to download/stream*
+> - **[📁 View in Repository](docs/demo_video.mp4)** ← *GitHub file viewer*
 
-📺 **[Watch Demo Video](docs/demo_video.mp4)** - Extended simulation showcase featuring:
+[![Ouroboros Ops Demo](docs/screenshots/main_simulation.png)](https://github.com/Shah-Priyanshu/ouroboros-ops/raw/main/docs/demo_video.mp4)
+*🎬 Click image above to download/stream the demo video*
+
+**📺 Demo Showcase** - 18.8-second HD demonstration featuring:
 - 80 snakes with optimized spacing for better survival and longer gameplay
 - Real-time pathfinding behavior and strategic food competition
 - Advanced collision detection and natural population dynamics
@@ -24,6 +30,8 @@ A zero-player, massively-autonomous Snake battleground that stresses AI path-pla
 - Performance overlay showing live statistics and frame progression
 
 **Video Details**: 1280×720 HD • 30 FPS • 7.8 MB MP4 • 18.8 seconds • 563 frames
+
+> **💡 Pro Tip**: Right-click the video link above and select "Save As" to download, or open in a new tab to stream directly
 
 ## 🎯 High-Level Goals
 
