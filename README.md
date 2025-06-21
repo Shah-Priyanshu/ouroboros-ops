@@ -67,7 +67,7 @@ ouroboros-ops/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ouroboros-ops.git
+git clone https://github.com/Shah-Priyanshu/ouroboros-ops.git
 cd ouroboros-ops
 
 # Create and activate virtual environment (Windows)
