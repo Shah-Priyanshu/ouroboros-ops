@@ -1,0 +1,16 @@
+# Screenshots Directory
+
+This directory contains screenshots and images for the Ouroboros Ops documentation.
+
+## Required Screenshots:
+1. `main_simulation.png` - Main simulation view with multiple snakes
+2. `fullscreen_mode.png` - Fullscreen mode demonstration
+3. `high_density.png` - High-density simulation (1000+ snakes)
+4. `pathfinding_demo.png` - Pathfinding visualization
+5. `performance_metrics.png` - Performance monitoring display
+
+## Image Guidelines:
+- Use PNG format for screenshots
+- Maximum size: 1920x1080
+- Compress images to keep repository size reasonable
+- Include captions in README that describe each image
